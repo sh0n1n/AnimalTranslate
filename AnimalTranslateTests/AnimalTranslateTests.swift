@@ -14,4 +14,14 @@ final class TranslateControllerTests: XCTestCase {
         // Now it should be false
         XCTAssertFalse(controller.isPetToHuman)
     }
+    
+    func testSelectPetSetsCorrectValue() {
+            let controller = TranslateController()
+
+            controller.selectPet(isCat: true)
+            XCTAssertTrue(controller.isCatSelected, "Expected isCatSelected to be true when selecting a cat")
+
+            controller.selectPet(isCat: false)
+            XCTAssertFalse(controller.isCatSelected, "Expected isCatSelected to be false when selecting a dog")
+        }
 }
