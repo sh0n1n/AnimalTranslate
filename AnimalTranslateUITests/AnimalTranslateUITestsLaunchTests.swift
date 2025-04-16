@@ -1,10 +1,3 @@
-//
-//  AnimalTranslateUITestsLaunchTests.swift
-//  AnimalTranslateUITests
-//
-//  Created by Melkor on 4/16/25.
-//
-
 import XCTest
 
 final class AnimalTranslateUITestsLaunchTests: XCTestCase {
