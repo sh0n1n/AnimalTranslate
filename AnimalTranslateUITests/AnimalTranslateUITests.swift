@@ -16,12 +16,21 @@ final class AnimalTranslateUITests: XCTestCase {
     }
 
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testTabBarSwitching() {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let translatorTab = app.buttons["Translator"]
+        let clickerTab = app.buttons["Clicker"]
+
+        XCTAssertTrue(translatorTab.exists)
+        XCTAssertTrue(clickerTab.exists)
+        
+        clickerTab.tap()
+            XCTAssertTrue(app.staticTexts["Clicker"].exists)
+        
+        translatorTab.tap()
+            XCTAssertTrue(app.staticTexts["Translator"].exists)
     }
 
     @MainActor
