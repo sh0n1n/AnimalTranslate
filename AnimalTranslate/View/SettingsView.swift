@@ -52,8 +52,9 @@ struct SettingsView: View {
     
     //Rate App
     private func rateApp() {
-        guard let writeReviewURL = URL(string: "") else { return }
-        UIApplication.shared.open(writeReviewURL)
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
     }
 
     //Share App
