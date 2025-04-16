@@ -25,3 +25,5 @@ A simple funny app to simulate translation between humans and pets.
 2. SwiftUI - UI framework;
 3. AVFoundation - library to work with audio.
 4. Unit-tests.
+5. UI-tests.
+   
